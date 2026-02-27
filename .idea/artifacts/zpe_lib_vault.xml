@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="zpe.lib.vault">
+    <output-path>$PROJECT_DIR$/build</output-path>
+    <root id="archive" name="zpe.lib.vault.jar">
+      <element id="module-output" name="zpe.lib.vault" />
+    </root>
+  </artifact>
+</component>
