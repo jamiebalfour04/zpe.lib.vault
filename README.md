@@ -41,22 +41,22 @@ import "zpe.lib.vault"
 
 vault = new Vault()
 
-vault.init("my-secure-passphrase")
+vault->init("my-secure-passphrase")
 
-vault.set("octopus_api_key", "sk_live_123")
-vault.set("smtp_password", "supersecret")
+vault->set("octopus_api_key", "sk_live_123")
+vault->set("smtp_password", "supersecret")
 
-if (vault.has("smtp_password"))
-    print(vault.get("smtp_password"))
+if (vault->has("smtp_password"))
+    print(vault->get("smtp_password"))
 end if
 
-keys = vault.list_keys()
+keys = vault->list_keys()
 
 for (k in keys)
     print(k)
 end for
 
-vault.close()
+vault->close()
 
 </pre>
 
