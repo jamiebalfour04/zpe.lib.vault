@@ -1,8 +1,5 @@
 import jamiebalfour.generic.JBBinarySearchTree;
-import jamiebalfour.zpe.core.ZPECore;
-import jamiebalfour.zpe.core.ZPEObject;
-import jamiebalfour.zpe.core.ZPERuntimeEnvironment;
-import jamiebalfour.zpe.core.ZPEStructure;
+import jamiebalfour.zpe.core.*;
 import jamiebalfour.zpe.interfaces.ZPEPropertyWrapper;
 import jamiebalfour.zpe.interfaces.ZPEType;
 import jamiebalfour.zpe.types.ZPEBoolean;
@@ -319,6 +316,13 @@ public class ZPEVaultObject extends ZPEStructure {
     public String getName() {
       return "init";
     }
+
+    @Override
+    public byte[] returnTypes() {
+      return new byte[]{YASSByteCodes.BOOLEAN_TYPE};
+    }
+
+
   }
 
   static class set_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
@@ -351,6 +355,11 @@ public class ZPEVaultObject extends ZPEStructure {
     @Override
     public String getName() {
       return "set";
+    }
+
+    @Override
+    public byte[] returnTypes() {
+      return new byte[]{YASSByteCodes.BOOLEAN_TYPE};
     }
   }
 
@@ -386,6 +395,11 @@ public class ZPEVaultObject extends ZPEStructure {
     public String getName() {
       return "get";
     }
+
+    @Override
+    public byte[] returnTypes() {
+      return new byte[]{YASSByteCodes.STRING_TYPE, YASSByteCodes.BOOLEAN_TYPE};
+    }
   }
 
   static class has_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
@@ -417,6 +431,11 @@ public class ZPEVaultObject extends ZPEStructure {
     @Override
     public String getName() {
       return "has";
+    }
+
+    @Override
+    public byte[] returnTypes() {
+      return new byte[]{YASSByteCodes.BOOLEAN_TYPE};
     }
   }
 
@@ -450,6 +469,11 @@ public class ZPEVaultObject extends ZPEStructure {
     public String getName() {
       return "delete";
     }
+
+    @Override
+    public byte[] returnTypes() {
+      return new byte[]{YASSByteCodes.BOOLEAN_TYPE};
+    }
   }
 
   static class list_keys_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
@@ -481,6 +505,11 @@ public class ZPEVaultObject extends ZPEStructure {
     public String getName() {
       return "list_keys";
     }
+
+    @Override
+    public byte[] returnTypes() {
+      return new byte[]{YASSByteCodes.LIST_TYPE, YASSByteCodes.BOOLEAN_TYPE};
+    }
   }
 
   static class close_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
@@ -511,6 +540,11 @@ public class ZPEVaultObject extends ZPEStructure {
     @Override
     public String getName() {
       return "close";
+    }
+
+    @Override
+    public byte[] returnTypes() {
+      return new byte[]{YASSByteCodes.BOOLEAN_TYPE};
     }
   }
 }
