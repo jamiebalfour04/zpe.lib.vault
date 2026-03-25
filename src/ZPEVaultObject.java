@@ -1,10 +1,10 @@
 import jamiebalfour.generic.JBBinarySearchTree;
 import jamiebalfour.zpe.core.*;
-import jamiebalfour.zpe.interfaces.ZPEPropertyWrapper;
-import jamiebalfour.zpe.interfaces.ZPEType;
-import jamiebalfour.zpe.types.ZPEBoolean;
-import jamiebalfour.zpe.types.ZPEList;
-import jamiebalfour.zpe.types.ZPEString;
+import jamiebalfour.zpe.core.interfaces.ZPEPropertyWrapper;
+import jamiebalfour.zpe.core.interfaces.ZPEType;
+import jamiebalfour.zpe.core.types.ZPEBoolean;
+import jamiebalfour.zpe.core.types.ZPEList;
+import jamiebalfour.zpe.core.types.ZPEString;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -286,7 +286,7 @@ public class ZPEVaultObject extends ZPEStructure {
   // ---------------- Native method implementations ----------------
   // Uses the same pattern as your MySQL object.
 
-  static class init_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
+  static class init_Command implements jamiebalfour.zpe.core.interfaces.ZPEObjectNativeMethod {
     @Override
     public String[] getParameterNames() {
       return new String[]{"passphrase"};
@@ -325,7 +325,7 @@ public class ZPEVaultObject extends ZPEStructure {
 
   }
 
-  static class set_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
+  static class set_Command implements jamiebalfour.zpe.core.interfaces.ZPEObjectNativeMethod {
     @Override
     public String[] getParameterNames() {
       return new String[]{"key", "value"};
@@ -363,7 +363,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
   }
 
-  static class get_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
+  static class get_Command implements jamiebalfour.zpe.core.interfaces.ZPEObjectNativeMethod {
     @Override
     public String[] getParameterNames() {
       return new String[]{"key"};
@@ -402,7 +402,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
   }
 
-  static class has_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
+  static class has_Command implements jamiebalfour.zpe.core.interfaces.ZPEObjectNativeMethod {
     @Override
     public String[] getParameterNames() {
       return new String[]{"key"};
@@ -439,7 +439,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
   }
 
-  static class delete_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
+  static class delete_Command implements jamiebalfour.zpe.core.interfaces.ZPEObjectNativeMethod {
     @Override
     public String[] getParameterNames() {
       return new String[]{"key"};
@@ -476,7 +476,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
   }
 
-  static class list_keys_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
+  static class list_keys_Command implements jamiebalfour.zpe.core.interfaces.ZPEObjectNativeMethod {
     @Override
     public String[] getParameterNames() {
       return new String[]{};
@@ -512,7 +512,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
   }
 
-  static class close_Command implements jamiebalfour.zpe.interfaces.ZPEObjectNativeMethod {
+  static class close_Command implements jamiebalfour.zpe.core.interfaces.ZPEObjectNativeMethod {
     @Override
     public String[] getParameterNames() {
       return new String[]{};

@@ -1,6 +1,6 @@
 import jamiebalfour.zpe.core.*;
-import jamiebalfour.zpe.interfaces.ZPECustomFunction;
-import jamiebalfour.zpe.interfaces.ZPELibrary;
+import jamiebalfour.zpe.core.interfaces.ZPECustomFunction;
+import jamiebalfour.zpe.core.interfaces.ZPELibrary;
 
 import java.util.HashMap;
 import java.util.Map;
