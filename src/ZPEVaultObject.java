@@ -298,7 +298,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
 
     @Override
-    public ZPEType MainMethod(JBBinarySearchTree<String, ZPEType> parameters, ZPEObject parent) {
+    public ZPEType run(HashMap<String, ZPEType> parameters, ZPEObject parent) {
       try {
         String pass = parameters.get("passphrase").toString();
         return new ZPEBoolean(((ZPEVaultObject) parent).init(pass));
@@ -337,7 +337,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
 
     @Override
-    public ZPEType MainMethod(JBBinarySearchTree<String, ZPEType> parameters, ZPEObject parent) {
+    public ZPEType run(HashMap<String, ZPEType> parameters, ZPEObject parent) {
       try {
         String k = parameters.get("key").toString();
         String v = parameters.get("value").toString();
@@ -375,7 +375,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
 
     @Override
-    public ZPEType MainMethod(JBBinarySearchTree<String, ZPEType> parameters, ZPEObject parent) {
+    public ZPEType run(HashMap<String, ZPEType> parameters, ZPEObject parent) {
       try {
         String k = parameters.get("key").toString();
         String val = ((ZPEVaultObject) parent).get(k);
@@ -414,7 +414,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
 
     @Override
-    public ZPEType MainMethod(JBBinarySearchTree<String, ZPEType> parameters, ZPEObject parent) {
+    public ZPEType run(HashMap<String, ZPEType> parameters, ZPEObject parent) {
       try {
         String k = parameters.get("key").toString();
         return new ZPEBoolean(((ZPEVaultObject) parent).has(k));
@@ -451,7 +451,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
 
     @Override
-    public ZPEType MainMethod(JBBinarySearchTree<String, ZPEType> parameters, ZPEObject parent) {
+    public ZPEType run(HashMap<String, ZPEType> parameters, ZPEObject parent) {
       try {
         String k = parameters.get("key").toString();
         return new ZPEBoolean(((ZPEVaultObject) parent).delete(k));
@@ -488,7 +488,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
 
     @Override
-    public ZPEType MainMethod(JBBinarySearchTree<String, ZPEType> parameters, ZPEObject parent) {
+    public ZPEType run(HashMap<String, ZPEType> parameters, ZPEObject parent) {
       try {
         return ((ZPEVaultObject) parent).listKeys();
       } catch (Exception e) {
@@ -524,7 +524,7 @@ public class ZPEVaultObject extends ZPEStructure {
     }
 
     @Override
-    public ZPEType MainMethod(JBBinarySearchTree<String, ZPEType> parameters, ZPEObject parent) {
+    public ZPEType run(HashMap<String, ZPEType> parameters, ZPEObject parent) {
       try {
         return new ZPEBoolean(((ZPEVaultObject) parent).close());
       } catch (Exception e) {

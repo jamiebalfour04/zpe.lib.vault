@@ -20,6 +20,11 @@ public class Plugin implements ZPELibrary {
   }
 
   @Override
+  public Map<String, ZPEModule> getModules() {
+    return new HashMap<>();
+  }
+
+  @Override
   public boolean supportsWindows() {
     return true;
   }
